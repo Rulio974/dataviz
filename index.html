@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My first Bulma website</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/hierarchy.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/map.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/geodata/worldLow.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+  </head>
+  <body>
+
+      <div class="tile is-ancestor ">
+        <div class="tile is-vertical is-8">
+          <div class="tile">
+            <div class="tile is-parent is-vertical">
+              <article class="tile is-child notification is-primary">
+                <p class="title">Vertical...</p>
+                <p class="subtitle">Top tile</p>
+              </article>
+              <article class="tile is-child notification is-warning">
+                <p class="title">...tiles</p>
+                <p class="subtitle">Bottom tile</p>
+              </article>
+            </div>
+            <div class="tile is-parent">
+              <article class="tile is-child notification is-warning">
+                <p class="title">Middle tile</p>
+                <p class="subtitle">With an image</p>
+                <div id="chartdiv"></div>
+              </article>
+            </div>
+          </div>
+          <div class="tile is-parent">
+            <article class="tile is-child notification is-danger">
+            
+             
+            </article>
+          </div>
+        </div>
+        <div class="tile is-parent">
+          <article class="tile is-child notification is-success">
+            <div class="content">
+              <p class="title">Tall tile</p>
+              <p class="subtitle">With even more content</p>
+              <div class="content">
+                <!-- Content -->
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <div id = "graphdiv"></div>
+
+    
+  
+    <script type="text/javascript" src="lib/main.js"></script>
+    <script type="text/javascript" src="lib/geoip.js"></script>
+    <script type="text/javascript" src="lib/graph.js"></script>
+  </body>
+</html>
