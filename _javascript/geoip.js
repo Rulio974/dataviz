@@ -133,8 +133,15 @@ am5.ready(async function() {
 	});
 		
 	for(var i = 0; i < IP.length; i++){
-		
-		await fetch("https://get.geojs.io/v1/ip/geo/"+IP[i]+".json")
+		fetchGeoLoc(IP[i])
+		if(i%100 == 0){
+			await new Promise(r => setTimeout(r, 100));
+		}
+	}
+	chart.appear(1000, 100);
+
+	function fetchGeoLoc(IP) {
+		fetch("https://get.geojs.io/v1/ip/geo/"+IP+".json")
 		.then(response => {
 			return response.json();
 		})	
@@ -143,7 +150,6 @@ am5.ready(async function() {
 			addCity(city.longitude, city.latitude, city.organization_name);
 		})
 	}
-	chart.appear(1000, 100);
 			
 	function addCity(longitude, latitude, title) {
 		pointSeries.data.push({
