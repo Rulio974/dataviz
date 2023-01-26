@@ -30,43 +30,43 @@ am5.ready(async function() {
 	);
 			
 			
-			// cont.children.push(
-			//   am5.Label.new(root, {
-			//     centerY: am5.p50,
-			//     text: "Map"
-			//   })
-			// );
-			
-			// var switchButton = cont.children.push(
-			//   am5.Button.new(root, {
-			//     themeTags: ["switch"],
-			//     centerY: am5.p50,
-			//     icon: am5.Circle.new(root, {
-			//       themeTags: ["icon"]
-			//     })
-			//   })
-			// );
-			
-			// switchButton.on("active", function () {
-			//   if (!switchButton.get("active")) {
-			//     chart.set("projection", am5map.geoMercator());
-			//     chart.set("panY", "translateY");
-			//     chart.set("rotationY", 0);
-			
-			//     backgroundSeries.mapPolygons.template.set("fillOpacity", 0);
-			//   } else {
-			//     chart.set("projection", am5map.geoOrthographic());
-			//     chart.set("panY", "rotateY");
-			//     backgroundSeries.mapPolygons.template.set("fillOpacity", 0.1);
-			//   }
-			// });
-			
-			// cont.children.push(
-			//   am5.Label.new(root, {
-			//     centerY: am5.p50,
-			//     text: "Globe"
-			//   })
-			// );
+	// cont.children.push(
+	//   am5.Label.new(root, {
+	//     centerY: am5.p50,
+	//     text: "Map"
+	//   })
+	// );
+	
+	// var switchButton = cont.children.push(
+	//   am5.Button.new(root, {
+	//     themeTags: ["switch"],
+	//     centerY: am5.p50,
+	//     icon: am5.Circle.new(root, {
+	//       themeTags: ["icon"]
+	//     })
+	//   })
+	// );
+	
+	// switchButton.on("active", function () {
+	//   if (!switchButton.get("active")) {
+	//     chart.set("projection", am5map.geoMercator());
+	//     chart.set("panY", "translateY");
+	//     chart.set("rotationY", 0);
+	
+	//     backgroundSeries.mapPolygons.template.set("fillOpacity", 0);
+	//   } else {
+	//     chart.set("projection", am5map.geoOrthographic());
+	//     chart.set("panY", "rotateY");
+	//     backgroundSeries.mapPolygons.template.set("fillOpacity", 0.1);
+	//   }
+	// });
+	
+	// cont.children.push(
+	//   am5.Label.new(root, {
+	//     centerY: am5.p50,
+	//     text: "Globe"
+	//   })
+	// );
 			
 			
 	var backgroundSeries = chart.series.push(am5map.MapPolygonSeries.new(root, {}));
@@ -77,11 +77,7 @@ am5.ready(async function() {
 		fillOpacity: 0,
 		strokeOpacity: 0
 	});
-			
-			
-			
-			
-			
+				
 	var polygonSeries = chart.series.push(
 		am5map.MapPolygonSeries.new(root, {
 			geoJSON: am5geodata_worldLow
@@ -136,8 +132,6 @@ am5.ready(async function() {
 		}
 	});
 		
-		
-			
 	for(var i = 0; i < IP.length; i++){
 		
 		await fetch("https://get.geojs.io/v1/ip/geo/"+IP[i]+".json")
@@ -157,12 +151,6 @@ am5.ready(async function() {
 			title: title
 		});
 	}
-	
-					
-					
-					
-					
-					
-					
+
 });
 				
