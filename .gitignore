@@ -3,6 +3,7 @@
 .DS_Store
 .ruby-version
 npm-debug.log
+nodeFile.json
 
 # Folders
 
