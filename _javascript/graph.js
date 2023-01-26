@@ -16,7 +16,7 @@ am5.ready(async function() {
         
         children: []};
 
-    await fetch("http://localhost:8003/nodeFile.json")
+    await fetch("http://localhost:8888/nodeFile.json")
     .then(response => {
        return response.json();
     })
