@@ -205,4 +205,4 @@ am5.ready(async function() {
     // Make stuff animate on load
     series.appear(1000, 100);
     
-    });
+});
